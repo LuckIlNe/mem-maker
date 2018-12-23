@@ -1,0 +1,51 @@
+<%= form_with(model: mem, local: true) do |form| %>
+  <% if mem.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mem.errors.count, "error") %> prohibited this mem from being saved:</h2>
+
+      <ul>
+      <% mem.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div onload="laodImagePicker()">
+    <%= form.label :photo_id %>
+    <%= form.select :photo_id, options_for_select(Photo.all.map { |el| [el.title, el.id.to_i, {'data-img-src' => el.thumb}]}), class: 'image-picker' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :context %>
+    <%= form.text_field :context %>
+  </div>
+
+  <div class="field">
+    <%= form.label :top_text %>
+    <%= form.text_field :top_text, id: 'top_text' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bottom_text %>
+    <%= form.text_field :bottom_text, id: 'bottom_text'%>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+
+<div>
+    <input type='button' id='button_check' value='Check' onclick="drawmem()"/>
+</div>
+
+<div>
+    <canvas id='canvas' width="600" height="600">
+</div>

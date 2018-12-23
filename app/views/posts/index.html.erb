@@ -1,0 +1,16 @@
+<h1>Posts#lasts</h1>
+<p>Find me in app/views/posts/lasts.html.erb</p>
+<div class="conteiner">
+    <div>
+        <%= form_tag("/posts/lasts.json", :method => "get", 
+                    remote: 'true', id: "lasts") do %>
+        <%= submit_tag("Last", class: "btn-lg btn-page") %> 
+        <% end %>
+        <%= form_tag("/posts/popular.json", :method => "get", 
+                    remote: 'true', id: "popular") do %>
+        <%= submit_tag("Popular", class: "btn-lg btn-page") %> 
+        <% end %>
+    </div>
+</div>
+<div id="posts">
+</div>

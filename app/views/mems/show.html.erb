@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @mem.title %>
+</p>
+
+<p>
+  <strong>Context:</strong>
+  <%= @mem.context %>
+</p>
+
+<p>
+  <strong>Top text:</strong>
+  <%= @mem.top_text %>
+</p>
+
+<p>
+  <strong>Bottom text:</strong>
+  <%= @mem.bottom_text %>
+</p>
+
+<p>
+  <strong>Photo:</strong>
+  <%= @mem.photo_id %>
+</p>
+
+<%= link_to 'Edit', edit_mem_path(@mem) %> |
+<%= link_to 'Back', mems_path %>

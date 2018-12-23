@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mems</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Context</th>
+      <th>Top text</th>
+      <th>Bottom text</th>
+      <th>Photo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mems.each do |mem| %>
+      <tr>
+        <td><%= mem.title %></td>
+        <td><%= mem.context %></td>
+        <td><%= mem.top_text %></td>
+        <td><%= mem.bottom_text %></td>
+        <td><%= mem.photo_id %></td>
+        <td><%= link_to 'Show', mem %></td>
+        <td><%= link_to 'Edit', edit_mem_path(mem) %></td>
+        <td><%= link_to 'Destroy', mem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mem', new_mem_path %>
