@@ -18,3 +18,4 @@
 //= require memMaker.js
 //= require image-picker
 //= require bootstrap
+//= require draw_posts

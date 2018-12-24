@@ -20,10 +20,8 @@
   <%= @mem.bottom_text %>
 </p>
 
-<p>
-  <strong>Photo:</strong>
-  <%= @mem.photo_id %>
-</p>
+<div id='posts' onload="draw_posts('<%=Mem.new.mem(@mem)%>')" >
+</div>
 
 <%= link_to 'Edit', edit_mem_path(@mem) %> |
 <%= link_to 'Back', mems_path %>

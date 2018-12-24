@@ -1,10 +1,3 @@
-$(document).ready(function() {
-    $("#lasts").on("ajax:success", (event) => {
-        [data, status, xhr] = event.detail;
-        draw_posts(data.value);
-    })
-})
-
 function draw_posts(data) {
     //var posts = $('#posts');
     //posts.innerHTML = '';
@@ -22,8 +15,7 @@ function draw_posts(data) {
         let body = " <div class='card-body'>" + user + content + " </div>";
         let image = new Image();
         image.src = post.photo_url;
-        image.onload = function() { /* LOAD IMAGE */ 
-        };
+        image.onload = function() { /* LOAD IMAGE */ };
         let i = 0;
         if (!image.naturalWidth) {
             image.onload();

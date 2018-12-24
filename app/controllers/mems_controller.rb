@@ -54,10 +54,17 @@ class MemsController < ApplicationController
   # DELETE /mems/1
   # DELETE /mems/1.json
   def destroy
-    @mem.destroy
-    respond_to do |format|
-      format.html { redirect_to mems_url, notice: 'Mem was successfully destroyed.' }
-      format.json { head :no_content }
+    if (@mem.user_id == current_user.id)
+      @mem.destroy
+      respond_to do |format|
+        format.html { redirect_to mems_url, notice: 'Mem was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    else 
+      respond_to do |format|
+        format.html { redirect_to home_index_url, notice: "<img src='<%= asset_path('NoHack.png') %>' alt='Logo' style='width:400px;' />>" }
+        format.json { head :no_content }
+      end
     end
   end
 

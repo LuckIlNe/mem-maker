@@ -19,21 +19,25 @@
   <div class="field">
     <%= form.label :title %>
     <%= form.text_field :title %>
+    <small id="title_help" class="help-block">  </small>
   </div>
 
   <div class="field">
     <%= form.label :context %>
     <%= form.text_field :context %>
+    <small id="context_help" class="help-block">  </small>
   </div>
 
   <div class="field">
     <%= form.label :top_text %>
-    <%= form.text_field :top_text, id: 'top_text' %>
+    <%= form.text_field :top_text, id: 'top' %>
+    <small id="top_help" class="help-block">  </small>
   </div>
 
   <div class="field">
     <%= form.label :bottom_text %>
-    <%= form.text_field :bottom_text, id: 'bottom_text'%>
+    <%= form.text_field :bottom_text, id: 'bot'%>
+    <small id="bot_help" class="help-block">  </small>
   </div>
 
   <div class="actions">

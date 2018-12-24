@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<div>
+  <p id="notice"><%= notice %></p>
+</div>
 
 <h1>Mems</h1>
 
@@ -21,7 +23,6 @@
         <td><%= mem.context %></td>
         <td><%= mem.top_text %></td>
         <td><%= mem.bottom_text %></td>
-        <td><%= mem.photo_id %></td>
         <td><%= link_to 'Show', mem %></td>
         <td><%= link_to 'Edit', edit_mem_path(mem) %></td>
         <td><%= link_to 'Destroy', mem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -29,6 +30,7 @@
     <% end %>
   </tbody>
 </table>
+
 
 <br>
 

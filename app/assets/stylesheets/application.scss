@@ -33,7 +33,7 @@ html, main {
 }
 
 .btn-page {
-    background-color:#0e53a7;
+    background-color:#a8f000;
     color:  #fffff0;
     font-size: 40px;
 }
@@ -42,43 +42,12 @@ main a:link {
     color:  #F71424;
 }
 
-nav a:hover{
+a:hover{
     color: #F71424;
 }
 
-a:hover {
-    color: #a8f000;
-}
 
 h1, div.conteiner {
     text-align: center;
-}
-
-.card {
-    margin: 0 auto;
-    float: none;
-    margin-bottom: 10px;
-    width: 500px;
-}
-
-.card-user {
-    margin-left:20px;
-    font-weight:bold;
-    float:left;
-}
-
-.card-title {
-    float:left;
-    margin-left:20px;
-    font-size: 15px;
-}
-
-.card-time {
-    float: right;
-    text-align: right;
-}
-
-.card-text {
-    padding: 20px;
 }
 
