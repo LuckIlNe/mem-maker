@@ -13,7 +13,7 @@
       <nav class="navbar navbar-default">
   <div class="container-fluied">
   <div class="mr">
-    <a href="/"><img src="<%= asset_path('logo1.jpg') %>" alt='Logo' style='width:350px;' /></a>
+    <a href="/<%= locale %>"><img src="<%= asset_path('logo1.jpg') %>" alt='Logo' style='width:350px;' /></a>
     <%= link_to 'English', { locale: :en }, class: "btn btn-default" unless current_page?(locale: :en) %>
     <%= link_to 'Русский', { locale: :ru }, class: "btn btn-default" unless current_page?(locale: :ru) %>
     <% unless user_signed_in? %>

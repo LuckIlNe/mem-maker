@@ -14,16 +14,13 @@ ru:
   dashboard: "Календарь"
   users: "Пользователи"
   sign_out: "Выйти"
-  welcome_to: "Добро пожаловать в"
-  calendar: "Календарь"
+  
+  
   all_meetings: "Все Встречи"
-  meeting_calendar: "Календарь встреч"
-  meetings: "Встречи"
   delete: "Удалить"
   add_any_notes: "Добавьте заметки тут"
   error_meeting_save: "не дают сохранить встречи:"
-  meeting_info: "Информация о встрече"
-  commented: "прокомментировал"
+
   confirm: "Вы уверенны?"
   no_session: "Похоже вы ещё не создали встречу"
   cancel_meeting: "Отменит встречу"
@@ -35,10 +32,28 @@ ru:
   comments: "Комментарии"
   to_comment: "чтобы прокомментировать"
 
-  add_photos: "Добавить фотографию"
-  my_memes: "Мои мемы"
-  posts: "Посты"
-  title: "Заголовок"
-  context: "Подпись"
-  top_text: "Верхний текст"
-  bottom_text: "Нижний текст"
+  add_photos: "Добавить фотографии"
+  my_memes: Мои мемы
+
+  posts: Посты
+  photo: Фотоография
+  photos: Фотографии
+
+  title: Заголовок
+  context: Подпись
+  top_text: Верхний текст
+  bottom_text: Нижний текст
+
+  show: Показать
+  edit: Редактировать
+  destroy: Удалить
+  new_mem: Новый Мем
+  back: Назад
+  mems: Мемы
+  welcome_to_mem_maker: Добро Позжалоть в Mem Maker
+  new_photo: Новое фото
+  editing_mem: Редактирование Мема
+  lasts: Последнии
+  populars: Популярные
+  check: Проверить
+

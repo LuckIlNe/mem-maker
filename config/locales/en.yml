@@ -46,7 +46,7 @@ en:
   dashboard: "Dashboard"
   users: "Users"
   sign_out: "Sign out"
-  welcome_to: "Welcome to"
+  
   calendar: "Calendar"
   all_meetings: "All Meetings"
   meeting_calendar: "Meeting Calendar"
@@ -67,5 +67,25 @@ en:
   comments: "Comments"
   to_comment: "to comment."
 
-  posts: "Posts"
-  title: "Title"
+  posts: Posts
+  title: Title
+  photo: Photo
+  photos: Photos
+
+  title: Title
+  context: Context
+  top_text: Top text
+  bottom_text: Bottom text
+
+  show: Show
+  edit: Edit
+  destroy: Destroy
+  new_mem: New meme
+  back: Back
+  mems: Memes
+  welcome_to_mem_maker: Welcom to Mem Maker
+  new_photo: New photo
+  editing_mem: editing meme
+  lasts: Lasts
+  populars: Populars
+  check: Check

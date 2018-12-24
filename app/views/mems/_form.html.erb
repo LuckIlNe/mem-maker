@@ -12,32 +12,32 @@
   <% end %>
 
   <div onload="laodImagePicker()">
-    <%= form.label :photo_id %>
+    <%= form.label :photo_id, t(:photo) %>
     <%= form.select :photo_id, options_for_select(Photo.all.map { |el| [el.title, el.id.to_i, {'data-img-src' => el.thumb}]}), class: 'image-picker' %>
   </div>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :title, t(:title) %>
     <%= form.text_field :title %>
     <small id="title_help" class="help-block">  </small>
   </div>
 
   <div class="field">
-    <%= form.label :context %>
+    <%= form.label :context, t(:context)%>
     <%= form.text_field :context %>
     <small id="context_help" class="help-block">  </small>
   </div>
 
   <div class="field">
-    <%= form.label :top_text %>
+    <%= form.label :top_text, t(:top_text) %>
     <%= form.text_field :top_text, id: 'top' %>
-    <small id="top_help" class="help-block">  </small>
+    <small id="top_help" class="help-block"> Max: 80 </small>
   </div>
 
   <div class="field">
-    <%= form.label :bottom_text %>
+    <%= form.label :bottom_text, t(:bottom_text) %>
     <%= form.text_field :bottom_text, id: 'bot'%>
-    <small id="bot_help" class="help-block">  </small>
+    <small id="bot_help" class="help-block"> Max: 80 </small>
   </div>
 
   <div class="actions">
@@ -47,8 +47,10 @@
 
 
 <div>
-    <input type='button' id='button_check' value='Check' onclick="drawmem()"/>
+    <input type='button' id='button_check' value="<%= t(:check) %>" onclick="drawmem()" />
 </div>
+
+    <%= button_tag t(:check), onclick: 'drawmem();', id: 'button_check' %>
 
 <div>
     <canvas id='canvas' width="600" height="600">

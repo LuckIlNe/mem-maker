@@ -11,17 +11,17 @@
 </p>
 
 <p>
-  <strong>Top text:</strong>
+  <strong><%=t(:top_text)%>:</strong>
   <%= @mem.top_text %>
 </p>
 
 <p>
-  <strong>Bottom text:</strong>
+  <strong><%=t(:bottom_text)%>:</strong>
   <%= @mem.bottom_text %>
 </p>
 
 <div id='posts' onload="draw_posts('<%=Mem.new.mem(@mem)%>')" >
 </div>
 
-<%= link_to 'Edit', edit_mem_path(@mem) %> |
-<%= link_to 'Back', mems_path %>
+<%= link_to t(:edit), edit_mem_path(@mem) %> |
+<%= link_to t(:back), mems_path %>

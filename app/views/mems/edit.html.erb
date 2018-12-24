@@ -1,6 +1,6 @@
-<h1>Editing Mem</h1>
+<h1><%= t(:editing_mem) %></h1>
 
 <%= render 'form', mem: @mem %>
 
-<%= link_to 'Show', @mem %> |
-<%= link_to 'Back', mems_path %>
+<%= link_to t(:show), @mem %> |
+<%= link_to t(:back), mems_path %>

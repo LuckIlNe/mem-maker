@@ -8,13 +8,19 @@ $(document).ready(function() {
     })
 
     $('#top').on("change",function () {
-        console.log($(this).val())
-        check_input_filed($(this))
+        console.log($(this).val());
+        check_input_filed($(this));
+        drawmem();
     })
 
     $('#bot').on("change",function () {
-        console.log($(this).val())
-        check_input_filed($(this))
+        console.log($(this).val());
+        check_input_filed($(this));
+        drawmem();
+    })
+
+    $('select').on("change",function () {
+        drawmem();
     })
 
     if ($('#mem_photo_id').lenght == 0) loadImagePicker()
@@ -30,7 +36,9 @@ function check_input_filed(dom) {
     dom.val(str);
     console.log(dom.attr('id'));
     warn_id = "#" + dom.attr('id') + "_help";
-    $(warn_id).val("only 90 symbols")
+    console.log(warn_id);
+    //$(warn_id).val("only 90 symbols")
+    drawmem();
 }
 
 function loadImagePicker() {

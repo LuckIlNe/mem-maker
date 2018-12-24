@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong><%=t(:title) %> :</strong>
   <%= @photo.title %>
 </p>
 
@@ -9,5 +9,5 @@
   <%= image_tag @photo.normal %>
 </p>
 
-<%= link_to 'Edit', edit_photo_path(@photo) %> |
-<%= link_to 'Back', photos_path %>
+<%= link_to t(:edit), edit_photo_path(@photo) %> |
+<%= link_to t(:back), photos_path %>

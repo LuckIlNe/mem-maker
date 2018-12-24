@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Photos</h1>
+<h1><%= t(:photos) %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Image</th>
+      <th><%= t(:title) %></th>
+      <th><%= t(:photo) %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,7 +16,7 @@
       <tr>
         <td><%= photo.title %></td>
         <td><%= image_tag photo.thumb %></td>
-        <td><%= link_to 'Show', photo %></td>
+        <td><%= link_to t(:show), photo %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Photo', new_photo_path %>
+<%= link_to t(:new_photo), new_photo_path %>

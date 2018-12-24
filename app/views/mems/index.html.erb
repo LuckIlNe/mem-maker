@@ -2,16 +2,16 @@
   <p id="notice"><%= notice %></p>
 </div>
 
-<h1>Mems</h1>
+<h1><%=t(:mems)%></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Title</th>
-      <th>Context</th>
-      <th>Top text</th>
-      <th>Bottom text</th>
-      <th>Photo</th>
+      <th><%=t(:title)%></th>
+      <th><%= t(:context)%></th>
+      <th><%= t(:top_text)%></th>
+      <th><%= t(:bottom_text)%></th>
+      <th><%= t(:photo)%></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,9 +23,9 @@
         <td><%= mem.context %></td>
         <td><%= mem.top_text %></td>
         <td><%= mem.bottom_text %></td>
-        <td><%= link_to 'Show', mem %></td>
-        <td><%= link_to 'Edit', edit_mem_path(mem) %></td>
-        <td><%= link_to 'Destroy', mem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t(:show), mem %></td>
+        <td><%= link_to t(:edit), edit_mem_path(mem) %></td>
+        <td><%= link_to t(:destroy), mem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Mem', new_mem_path, method: :get %>
+<%= link_to t(:new_mem), new_mem_path, method: :get %>
