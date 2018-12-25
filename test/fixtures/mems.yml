@@ -7,9 +7,9 @@ one:
   bottom_text: MyString
   photo_id: 1
 
-two:
-  title: MyString
-  context: MyString
-  top_text: MyString
-  bottom_text: MyString
-  photo_id: 1
+#two:
+#  title: MyStrin
+#  context: MyString
+#  top_text: MyString
+#  bottom_text: MyString
+#  photo_id: 3

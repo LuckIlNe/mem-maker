@@ -23,8 +23,8 @@
         <td><%= mem.context %></td>
         <td><%= mem.top_text %></td>
         <td><%= mem.bottom_text %></td>
-        <td><%= link_to t(:show), mem %></td>
-        <td><%= link_to t(:edit), edit_mem_path(mem) %></td>
+        <td><%= link_to t(:show), mem %></td> <!-- show mem -->
+        <td><%= link_to t(:edit), edit_mem_path(mem), method: :get %></td>
         <td><%= link_to t(:destroy), mem, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

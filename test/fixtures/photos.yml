@@ -1,9 +1,8 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  image: 
+  title: firstPhoto 
+    #Paperclip::Attachment:0x0000558bc5fa9118 @name=:image, @name_string="image", @instance=#<Photo id: 1, title: "One Does Not Simply", image_file_name: "One-Does-Not-Simply.jpg",image_content_type: "image/jpeg", image_file_size: 30894, image_updated_at: "2018-12-23 23:18:52", created_at: "2018-12-23 23:18:52", updated_at: "2018-12-23 23:18:52">
 
 two:
-  title: MyString
-  image: 
+  title: SecondPhoto

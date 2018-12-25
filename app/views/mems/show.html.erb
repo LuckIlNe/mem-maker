@@ -20,7 +20,8 @@
   <%= @mem.bottom_text %>
 </p>
 
-<div id='posts' onload="draw_posts('<%=Mem.new.mem(@mem)%>')" >
+<div id='posts'>
+  <script> draw_posts([<%= raw @mem.mem %>]) </script>
 </div>
 
 <%= link_to t(:edit), edit_mem_path(@mem) %> |

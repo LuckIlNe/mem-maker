@@ -4,7 +4,7 @@ class PostsController < ApplicationController
         format.html
         format.json do
             render json:
-            { type: 'response', value: Mem.new.lasts_mems.sort_by  }
+            { type: 'response', value: Mem.lasts_mems.sort_by  }
         end
     end
   end

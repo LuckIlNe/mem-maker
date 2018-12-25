@@ -1,6 +1,10 @@
 require 'test_helper'
 
 class PostsControllerTest < ActionDispatch::IntegrationTest
+  def setup 
+    sign_in users(:one)
+  end
+
   test "should get lasts" do
     get posts_lasts_url
     assert_response :success

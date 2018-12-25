@@ -3,6 +3,7 @@ class Photo < ApplicationRecord
     validates_attachment :image,
                     content_type: { content_type: /\Aimage\/.*\z/ },
                     size: { less_than: 1.megabyte }
+    validates :image, :attachment_presence => true
     def normal
         image.url(:normal)
     end

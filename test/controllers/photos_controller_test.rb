@@ -1,8 +1,15 @@
 require 'test_helper'
 
 class PhotosControllerTest < ActionDispatch::IntegrationTest
+
   setup do
-    @photo = photos(:one)
+    sign_in users(:one)
+    @photo = photos(:two)
+    #@photo.image = fixture_file_upload 'logo1.jpg'
+    photo = fixture_file_upload 'logo1.jpg'
+      assert_difference('Photo.count') do
+        post photos_url, params: { photo: { image: photo, title: @photo.title } }
+    end
   end
 
   test "should get index" do
@@ -16,32 +23,21 @@ class PhotosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create photo" do
-    assert_difference('Photo.count') do
-      post photos_url, params: { photo: { image: @photo.image, title: @photo.title } }
+  
+      assert_redirected_to photo_url(Photo.last)
     end
 
-    assert_redirected_to photo_url(Photo.last)
-  end
 
   test "should show photo" do
+    sign_in users(:one)
     get photo_url(@photo)
     assert_response :success
-  end
-
-  test "should get edit" do
-    get edit_photo_url(@photo)
-    assert_response :success
-  end
-
-  test "should update photo" do
-    patch photo_url(@photo), params: { photo: { image: @photo.image, title: @photo.title } }
-    assert_redirected_to photo_url(@photo)
   end
 
   test "should destroy photo" do
     assert_difference('Photo.count', -1) do
       delete photo_url(@photo)
-    end
+  end
 
     assert_redirected_to photos_url
   end
