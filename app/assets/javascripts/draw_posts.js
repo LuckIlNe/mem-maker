@@ -20,7 +20,9 @@ function draw_posts(data) {
         if (!image.naturalWidth) {
             image.onload();
         }
+        console.log(image.naturalHeight,image.naturalWidth, "WIDthhhhhhhhhhhhhhhhhhhhhhhhhh")
         let canvas = "<canvas id='" + post.mem.id + "' height='" + image.naturalHeight + "' width='" + image.naturalWidth + "'> </canvas> ";
+        console.log(canvas)
         let postInner = "<div class='card text-center post'> " + header + canvas + body + "</div> <br/>";
         postsHTML += postInner;
         memmaker = new memMaker(post.mem.id); 

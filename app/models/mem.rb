@@ -10,9 +10,15 @@ class Mem < ApplicationRecord
     def self.mems
         Mem.all.map do |mem|
             date = mem.created_at.strftime("%F %T").gsub(/(\d+)-(\d+)-(\d+)/,"#{$3}.#{$2}.#{$1}").to_s
+            photo = Photo.find_by_id(mem.photo_id)
+            # width, height = MiniMagick::Image.load(photo)[:dimensions]
+            # width, height = photo.image
+            # puts "*" * 80, width, height, photo.image
             {
                 mem: mem,
-                photo_url: Photo.find_by_id(mem.photo_id).normal,
+                photo_url: photo.normal,
+                width: 500,
+                height:300,
                 nickname: User.find_by_id(mem.user_id).nickname,
                 date: date
             }

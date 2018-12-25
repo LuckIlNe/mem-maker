@@ -1,25 +1,5 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong><%= t(:title) %>: </strong>
-  <%= @mem.title %>
-</p>
-
-<p>
-  <strong><%= t(:context) %>:</strong>
-  <%= @mem.context %>
-</p>
-
-<p>
-  <strong><%=t(:top_text)%>:</strong>
-  <%= @mem.top_text %>
-</p>
-
-<p>
-  <strong><%=t(:bottom_text)%>:</strong>
-  <%= @mem.bottom_text %>
-</p>
-
 <div id='posts'>
   <script> draw_posts([<%= raw @mem.mem %>]) </script>
 </div>

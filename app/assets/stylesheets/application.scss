@@ -35,7 +35,8 @@ html, main {
 .btn-page {
     background-color:#a8f000;
     color:  #fffff0;
-    font-size: 40px;
+    
+
 }
 
 main a:link {
@@ -47,7 +48,11 @@ a:hover{
 }
 
 
-h1, div.conteiner {
-    text-align: center;
+h1 {
+    margin-left: 20px;
+}
+
+form {
+    margin-left: 20px;
 }
 

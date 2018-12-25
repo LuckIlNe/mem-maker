@@ -69,3 +69,4 @@ gem 'mini_magick'
 gem "paperclip", "~> 5.1"
 gem 'rails-i18n'
 gem 'selenium-webdriver'
+gem 'test-unit'

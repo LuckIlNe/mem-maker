@@ -20,20 +20,13 @@ function draw_posts(data) {
         let header = "<div class='card-header'> " + title + date + " </div>";
         let content =  "<div class='card-text'> " + post.mem.context + "</div>";
         let body = " <div class='card-body'>" + user + content + " </div>";
-        let image = new Image();
-        image.src = post.photo_url;
-        image.onload = function() { /* LOAD IMAGE */ 
-        };
-        let i = 0;
-        if (!image.naturalWidth) {
-            image.onload();
-        }
-        let canvas = "<canvas id='" + post.mem.id + "' height='" + image.naturalHeight + "' width='" + image.naturalWidth + "'> </canvas> ";
+
+        let canvas = "<canvas id='" + post.mem.id + "' width='500' height='300' > </canvas> ";
         let postInner = "<div class='card text-center post'> " + header + canvas + body + "</div> <br/>";
+
         postsHTML += postInner;
         memmaker = new memMaker(post.mem.id); 
-        console.log(image);
-        memmaker.getImage(image.src)
+        memmaker.getImage(post.photo_url)
         let top = post.mem.top_text
         let bottom = post.mem.bottom_text
         memmaker.getText(top, bottom);
